@@ -2,7 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
 import 'package:tes/page_bottom_navigation.dart';
+import 'package:tes/page_list_users.dart';
 import 'package:tes/page_navigation_bar.dart';
+import 'package:tes/page_search_list.dart';
+import 'package:tes/screen_page/page_list_berita.dart';
 
 class PageBeranda extends StatelessWidget {
   const PageBeranda({super.key});
@@ -131,6 +134,36 @@ class PageBeranda extends StatelessWidget {
                   color: Colors.green,
                   textColor: Colors.white,
                 ),
+              SizedBox(height: 10,),
+              MaterialButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)
+                => PageListUsers()
+                ));
+              },
+                child: Text('Page Search List',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 12
+                  ),
+                ),
+                color: Colors.green,
+                textColor: Colors.white,
+              ),
+              SizedBox(height: 10,),
+              MaterialButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)
+                => PageListBerita()
+                ));
+              },
+                child: Text('Page List Berita',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 12
+                  ),
+                ),
+                color: Colors.green,
+                textColor: Colors.white,
+              ),
 
             ],
           ),
